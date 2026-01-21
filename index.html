@@ -4,28 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>八東文学史総合</title>
-  <meta name="theme-color" content="#111111" />
+
+  <!-- ブラウザ上部（モバイルのアドレスバー等）の色：背景と合わせる -->
+  <meta name="theme-color" content="#241612" />
   <link rel="manifest" href="manifest.json">
+
   <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;margin:0;background:#111;color:#eee}
+    /*
+      焦げ茶テーマ（白抜き文字が沈まないように、黒ではなく深い茶）
+      Base      : #241612 (焦げ茶・ダークチョコ)
+      Surface   : #2d1c16 (カード面)
+      Surface-2 : #332019 (押しやすいUI面)
+      Border    : #4a3228 (境界線)
+      Border-2  : #5a3d31 (hoverや強め境界)
+      Text      : #eee
+      Muted     : #c9b7ad
+      Link      : #f0c27a (琥珀)
+      Status ok : #b7f0c9
+      warn      : #ffd08a
+      err       : #ff9b9b
+      Code bg   : #281914
+    */
+
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;
+      margin:0;
+      background:#241612;
+      color:#eee;
+    }
+
     .wrap{max-width:860px;margin:0 auto;padding:16px}
-    .card{background:#1b1b1b;border:1px solid #2a2a2a;border-radius:14px;padding:18px;min-height:180px}
+
+    .card{
+      background:#2d1c16;
+      border:1px solid #4a3228;
+      border-radius:14px;
+      padding:18px;
+      min-height:180px
+    }
+
     .row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;align-items:center}
-    button{background:#2a2a2a;color:#eee;border:1px solid #3a3a3a;border-radius:10px;padding:10px 12px;cursor:pointer}
-    button:hover{background:#333}
+
+    button{
+      background:#332019;
+      color:#eee;
+      border:1px solid #5a3d31;
+      border-radius:10px;
+      padding:10px 12px;
+      cursor:pointer
+    }
+    button:hover{background:#3a241c}
+
     input[type="file"]{color:#eee}
-    .muted{color:#aaa;font-size:12px;line-height:1.5}
+
+    .muted{color:#c9b7ad;font-size:12px;line-height:1.5}
+
     .big{font-size:20px;line-height:1.35;white-space:pre-wrap}
-    .sep{height:1px;background:#2a2a2a;margin:14px 0}
+
+    .sep{height:1px;background:#4a3228;margin:14px 0}
+
     .kpi{display:flex;gap:12px;flex-wrap:wrap}
-    .pill{background:#222;border:1px solid #2f2f2f;border-radius:999px;padding:6px 10px;font-size:12px;color:#ddd}
-    a{color:#9ad}
-    .status{font-size:12px;color:#cfc;}
-    .status.warn{color:#fc9;}
-    .status.err{color:#f99;}
-    code{background:#1a1a1a;border:1px solid #2a2a2a;padding:1px 6px;border-radius:8px}
+
+    .pill{
+      background:#2b1a15;
+      border:1px solid #4a3228;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      color:#e6d9d2
+    }
+
+    a{color:#f0c27a}
+    a:hover{color:#ffd79d}
+
+    .status{font-size:12px;color:#b7f0c9;}
+    .status.warn{color:#ffd08a;}
+    .status.err{color:#ff9b9b;}
+
+    code{
+      background:#281914;
+      border:1px solid #4a3228;
+      padding:1px 6px;
+      border-radius:8px;
+      color:#f2e8e3
+    }
+
+    summary{cursor:pointer}
+    details{border:1px solid #4a3228;border-radius:12px;padding:10px 12px;background:#291915}
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <h1 style="margin:6px 0 6px;">文学史 知識道場</h1>
